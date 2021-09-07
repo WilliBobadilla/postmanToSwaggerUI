@@ -1,0 +1,40 @@
+{
+	"info": {
+		"_postman_id": "e32212f6-c8ea-43bb-9994-75846b690641",
+		"name": "test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "test",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer dsfadsfdfkkk",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://httpbin.org/get?hola=dfd",
+					"protocol": "http",
+					"host": [
+						"httpbin",
+						"org"
+					],
+					"path": [
+						"get"
+					],
+					"query": [
+						{
+							"key": "hola",
+							"value": "dfd"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

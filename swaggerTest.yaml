@@ -1,0 +1,23 @@
+swagger: '2.0'
+info:
+  title: test
+  description: No description
+  version: v1
+schemes:
+  - https
+paths:
+  /statuscode/100:
+    get:
+      summary: test
+      parameters:
+        - in: header
+          name: Authorization
+          required: true
+          type: string
+        - in: query
+          name: param1
+          type: string
+          required: true
+      responses:
+        '200':
+          description: OK
