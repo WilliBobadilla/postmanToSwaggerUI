@@ -1,0 +1,48 @@
+{
+	"info": {
+		"_postman_id": "e32212f6-c8ea-43bb-9994-75846b690641",
+		"name": "test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "DA-2565-test",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer dsfadsfdfkkk",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://httpbin.org/get/:pathvar?hola=dfd",
+					"protocol": "http",
+					"host": [
+						"httpbin",
+						"org"
+					],
+					"path": [
+						"get",
+						":pathvar"
+					],
+					"query": [
+						{
+							"key": "hola",
+							"value": "dfd"
+						}
+					],
+					"variable": [
+						{
+							"key": "pathvar",
+							"value": "nueavavariable"
+						}
+					]
+				},
+				"description": "this is a comment from the ticket"
+			},
+			"response": []
+		}
+	]
+}

@@ -6,16 +6,16 @@ info:
 schemes:
   - https
 paths:
-  /statuscode/100:
+  /get/:pathvar:
     get:
-      summary: test
+      summary: DA-2565-test
       parameters:
         - in: header
           name: Authorization
           required: true
           type: string
         - in: query
-          name: param1
+          name: hola
           type: string
           required: true
       responses:

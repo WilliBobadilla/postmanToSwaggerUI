@@ -10,6 +10,7 @@ const p2s = require('postman-to-swagger')
 const yaml = require('js-yaml')
 const fs = require('fs')
 const postmanJson = require('./test.json')
+const direct = require('./directToSwaagerPosEx.json')
 const swaggerJson = p2s(postmanJson, {
     target_spec: "swagger2.0",
     info: {
@@ -19,7 +20,7 @@ const swaggerJson = p2s(postmanJson, {
 
 //let output = JSON.stringify(swaggerJson, null, 2)
 let output = yaml.dump(swaggerJson)
-
+//console.log(JSON.stringify(swaggerJson));
 // Save to file
 fs.writeFileSync(
     'swaggerTest.yaml',
