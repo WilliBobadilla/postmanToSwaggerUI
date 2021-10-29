@@ -1,0 +1,102 @@
+{
+	"info": {
+		"_postman_id": "e32212f6-c8ea-43bb-9994-75846b690641",
+		"name": "test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "FFF-44564:test",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer dsfadsfdfkkk",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://httpbin.org/get/:pathvar/:anotherVar?hola=dfd",
+					"protocol": "http",
+					"host": [
+						"httpbin",
+						"org"
+					],
+					"path": [
+						"get",
+						":pathvar",
+						":anotherVar"
+					],
+					"query": [
+						{
+							"key": "hola",
+							"value": "dfd"
+						}
+					],
+					"variable": [
+						{
+							"key": "pathvar",
+							"value": "ddd"
+						},
+						{
+							"key": "anotherVar",
+							"value": ""
+						}
+					]
+				},
+				"description": "this is a comment from the ticket"
+			},
+			"response": []
+		},
+		{
+			"name": "hlkjh:5642-GetNewRecipe",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"variable1\":\"hola\"\n}"
+				},
+				"url": {
+					"raw": "http://httpbin.org/newmethod/:id/idtype/:idtype?quer=queryvalue",
+					"protocol": "http",
+					"host": [
+						"httpbin",
+						"org"
+					],
+					"path": [
+						"newmethod",
+						":id",
+						"idtype",
+						":idtype"
+					],
+					"query": [
+						{
+							"key": "quer",
+							"value": "queryvalue"
+						}
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "28"
+						},
+						{
+							"key": "idtype",
+							"value": "39"
+						}
+					]
+				},
+				"description": "new recipe for the method"
+			},
+			"response": []
+		}
+	]
+}

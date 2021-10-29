@@ -6,18 +6,51 @@ info:
 schemes:
   - https
 paths:
-  /get/:pathvar:
+  '/get/{pathvar}/{anotherVar}':
     get:
-      summary: DA-2565-test
+      summary: 'FFF-44564:test'
       parameters:
         - in: header
           name: Authorization
           required: true
           type: string
+        - in: path
+          name: pathvar
+          type: string
+          required: true
+        - in: path
+          name: anotherVar
+          type: string
+          required: true
         - in: query
           name: hola
           type: string
           required: true
-      responses:
+      responses: &ref_0
         '200':
           description: OK
+  '/newmethod/{id}/idtype/{idtype}':
+    post:
+      summary: 'hlkjh:5642-GetNewRecipe'
+      parameters:
+        - in: body
+          name: variable1
+          schema:
+            type: object
+            properties:
+              variable1:
+                type: string
+          required: true
+        - in: path
+          name: id
+          type: string
+          required: true
+        - in: path
+          name: idtype
+          type: string
+          required: true
+        - in: query
+          name: quer
+          type: string
+          required: true
+      responses: *ref_0
