@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PostmanToSwagger2.0</title>
+</head>
+
+<body>
+
+</body>
+<script src="./src/to_swagger_2.0.js"></script>
+<script>
+    Object.defineProperty(Array.prototype, 'flat', {
+        value: function (depth = 1) {
+            return this.reduce(function (flat, toFlatten) {
+                return flat.concat((Array.isArray(toFlatten) && (depth > 1)) ? toFlatten.flat(depth - 1) : toFlatten);
+            }, []);
+        }
+    });
+
+    const p2s = require('.././src/index')//require('postman-to-swagger')//
+    const yaml = require('js-yaml')
+    const fs = require('fs')
+    const postmanJson = require('./data/testPostoman2.json')//iport in json from UI
+    const swaggerJson = p2s(postmanJson, {
+        target_spec: "swagger2.0",
+        info: {
+            version: 'v1'
+        }
+    })
+
+    //let output = JSON.stringify(swaggerJson, null, 2)
+    let output = yaml.dump(swaggerJson)
+    //console.log(JSON.stringify(swaggerJson));
+    //we can use output to display in ui
+    // Save to file
+    fs.writeFileSync(
+        'swaggerTestOutput.yaml',
+        output,
+        'utf8'
+    )
+</script>
+
+</html>
