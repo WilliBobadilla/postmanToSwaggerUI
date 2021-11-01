@@ -19,10 +19,12 @@
 <div class="container">
     <div class="row">
         <div class="col-sm">
-            One of three columns
+            <h3>Json of the postman</h3>
+            <textarea name="jsonField" id="jsonField" cols="30" rows="10"></textarea>
         </div>
         <div class="col-sm">
-            One of three columns
+            <h3>Output in swagger2</h3>
+            <textarea name="yamlOutput" id="yamlOutput" cols="30" rows="10"></textarea>
         </div>
     </div>
 </div>
@@ -44,23 +46,27 @@
     const yaml = require('js-yaml')
     const fs = require('fs')
     const postmanJson = require('./data/testPostoman2.json')//iport in json from UI
-    const swaggerJson = p2s(postmanJson, {
-        target_spec: "swagger2.0",
-        info: {
-            version: 'v1'
-        }
-    })
+    function convert() {
+        const swaggerJson = p2s(postmanJson, {
+            target_spec: "swagger2.0",
+            info: {
+                version: 'v1'
+            }
+        })
 
-    //let output = JSON.stringify(swaggerJson, null, 2)
-    let output = yaml.dump(swaggerJson)
-    //console.log(JSON.stringify(swaggerJson));
-    //we can use output to display in ui
-    // Save to file
-    fs.writeFileSync(
-        'swaggerTestOutput.yaml',
-        output,
-        'utf8'
-    )
+        //let output = JSON.stringify(swaggerJson, null, 2)
+        let output = yaml.dump(swaggerJson)
+        //console.log(JSON.stringify(swaggerJson));
+        //we can use output to display in ui
+
+        // Save to file
+        /*fs.writeFileSync(
+            'swaggerTestOutput.yaml',
+            output,
+            'utf8'
+        )*/
+    }
+
 </script>
 
 </html>
