@@ -16,26 +16,26 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
 </head>
-<div class="container">
-    <div class="row">
-        <div class="col-sm">
-            <h3>Json of the postman</h3>
-            <textarea name="jsonField" id="jsonField" cols="30" rows="10"></textarea>
-        </div>
-        <div class="col-sm">
-            <h3>Output in swagger2</h3>
-            <textarea name="yamlOutput" id="yamlOutput" cols="30" rows="10"></textarea>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+                <form action="/v1/parse" method="post">
+                    <h3>Json of the postman</h3>
+                    <textarea name="jsonField" id="jsonField" cols="30" rows="10"></textarea>
+                    <br>
+                    <button type="submit" onclick="convert()">Convertir</button>
+                    <button onclick="">Borrar</button>
+                </form>
+
+            </div>
         </div>
 
     </div>
-    <button onclick="convert()">Convertir</button>
-    <button onclick="">Borrar</button>
-</div>
-
-<body>
-
 </body>
 <script src="./src/to_swagger_2.0.js"></script>
+<script src="myJS.js"></script>
 <script>
     Object.defineProperty(Array.prototype, 'flat', {
         value: function (depth = 1) {
