@@ -1,6 +1,6 @@
 # Postman to Swagger :wrench: :book:
 
-This project is to convert from **Postman Collection** to **Swagger 2.0** with a UI
+This project is to convert from **Postman Collection** to **Swagger 2.0** with a UI, it is very usefull to write the docs of your api
 
 ## URL of the UI :link:
 
