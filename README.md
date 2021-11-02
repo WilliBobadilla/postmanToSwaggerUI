@@ -1,4 +1,4 @@
-# Postman to Swagger :wrench: :book:
+# Postman to Swagger :wrench: :book: (UI still in progress)
 
 This project is to convert from **Postman Collection** to **Swagger 2.0** with a UI, it is very usefull to write the docs of your api
 
