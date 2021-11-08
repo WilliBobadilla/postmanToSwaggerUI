@@ -16,6 +16,12 @@ The engine used is a personalized one: https://github.com/WilliBobadilla/postman
 :two: Then click on "Convert" <br>
 :three: Then you will have your Swagger in the textarea
 
+## TODO ::
+
+1. operationId can be extracted from the name.
+2. Add in notes that have to extract base path.
+3.
+
 ## Author :man:
 
 - [Williams Bobadilla](https://github.com/WilliBobadilla)
